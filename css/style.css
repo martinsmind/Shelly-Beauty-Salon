@@ -1,0 +1,331 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  
+  body {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  header {
+    height: 4rem;
+  }
+  
+  header nav {
+    width: 90%;
+    margin: auto;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav .logo h1{
+    font-family: 'Alkatra', cursive;
+    font-style: italic;
+  }
+  
+  header nav ul{
+    width: 60%;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  header nav ul li{
+    list-style: none;
+  }
+  
+  header nav ul li a{
+   text-decoration: none;
+   font-weight: 600;
+   color: black;
+  }
+  
+  header nav span{
+    font-weight: 700;
+  }
+  
+  main{
+    background-image: url("../img/background2.jpeg");
+    height: 65rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 30% 260px;
+    border-bottom-left-radius: 300% 60%;
+    
+    border-bottom: 8px solid rgb(176, 166, 165);
+  }
+  
+  main .main-container{
+    height: 70rem;
+    width: 50%;
+    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  main .main-container h1{
+    color: rgb(238, 231, 230);
+    font-weight: 200;
+    font-size: 7rem;
+    width: fit-content;
+    margin: 0;
+  }
+  
+  main .main-container p{
+    color: white;
+  }
+  
+  main .main-container > a, .about section a, .discount-banner .discount-banner-container a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    width: fit-content;
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+  }
+  
+  main .main-container .first-visit{
+    width: 70%;
+    height: 22rem;
+    color: white;
+    background-color: black;
+    padding: 3rem;
+  }
+  
+  main .main-container .first-visit p{
+    margin: 2.5rem 0;
+  }
+  
+  main .main-container .first-visit p b{
+   font-size: 2.4rem;
+  }
+  
+  main .main-container .first-visit a{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 0.6rem 2rem;
+  }
+  
+  .features{
+    height: 25rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+  }
+  
+  .features section{
+    width: 28%;
+    text-align: center;
+  }
+  
+  .features section p, .about section p{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 4.8rem;
+  }
+  
+  .about{
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 244, 246)
+  }
+  
+  .about section{
+    height: 67%;
+    width: 35%;
+    padding-right: 4rem;
+  }
+  
+  .about section h2{
+    font-size: 3rem;
+  }
+  
+  .about section + section img{
+    width: 114%;
+  }
+  
+  .stylists{
+    width: 100%;
+    height: 50rem;
+  }
+  
+  .stylists h2, .lookbook h2{
+    width: fit-content;
+    font-size: 2rem;
+    margin: 6rem auto;
+    padding-bottom: 0.4rem;
+    letter-spacing: 0.2rem;
+    border-bottom: 3px solid black;
+  }
+  
+  .stylists .stylist-container{
+    width: 80%;
+    margin: auto;
+    height: 28rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stylists .stylist-container section{
+    height: 28rem;
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stylists .stylist-container section img{
+    width: 100%;
+    height: 85%;
+  }
+  
+  .stylists .stylist-container section span{
+    height: 15%;
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .discount-banner{
+    width: 70%;
+    margin: auto;
+    height: 30rem;
+    background-image: url("../img/discount1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .discount-banner .discount-banner-container{
+    width: 50%;
+    height: 30rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 4rem;
+    gap: 2rem;
+  }
+  
+  .discount-banner .discount-banner-container span b{
+    font-size: 3rem;
+  }
+  
+  .discount-banner .discount-banner-container span + span{
+    font-size: 2rem;
+    display: block;
+  }
+  
+  .lookbook{
+    width: 100%;
+    height: 100rem;
+  }
+  
+  .lookbook .lookbook-container{
+    width: 70%;
+    height: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  
+  .lookbook-container img:nth-of-type(odd){
+    width: 30%;
+    height: 30rem;
+  } 
+  
+  .lookbook-container img:nth-of-type(even){
+    width: 30%;
+    height: 15rem;
+  }
+  
+  .lookbook-container img:nth-of-type(6){
+    height: 30rem;
+  }
+  
+  footer{
+    padding-top: 3rem;
+    background-color: black;
+  }
+  
+  footer .footer-bottom-section{
+    width: 100%;
+    height: 10rem;
+  }
+  
+  footer .footer-bottom-section ul{
+    width: fit-content;
+    height: 3rem;
+    margin: auto;
+  }
+  
+  footer .footer-bottom-section ul li{
+    margin: 0;
+    padding: 0.5rem 1rem;
+    float: left;
+  }
+  
+  footer .footer-bottom-section ul + ul li a{
+    color: #e5ebf077;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+    .logo {
+      font-size: 1.5rem;
+    }
+    ul {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 1rem;
+    }
+    span {
+      display: none;
+    }
+    .features section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .features img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  
